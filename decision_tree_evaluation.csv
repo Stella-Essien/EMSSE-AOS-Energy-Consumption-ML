@@ -1,0 +1,4 @@
+Metric,Value,Unit
+MAE,155.84519581367633,Wh per measurement interval
+RMSE,211.57506388059082,Wh per measurement interval
+R²,-4.401053613866815,Dimensionless
