@@ -1,0 +1,5 @@
+Metric,Value,Unit
+MAE,52.015269919106856,Wh per measurement interval
+RMSE,86.72950713189464,Wh per measurement interval
+R²,0.09242341295508416,Dimensionless
+Mean Prediction Error,-6.3697471029816155,Wh per measurement interval
