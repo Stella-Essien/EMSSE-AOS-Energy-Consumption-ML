@@ -1,6 +1,4 @@
-# EMSSE-AOS-Energy-Consumption-ML
-Machine learning project for household appliance energy consumption prediction using Linear Regression and Decision Tree Regression.
-EMSSE AOS Energy Consumption Prediction Using Machine Learning
+Household Energy Consumption Prediction Using Machine Learning
 
 Project Overview
 
@@ -13,63 +11,53 @@ Objectives
 - Train a Decision Tree Regression model.
 - Evaluate and compare model performance.
 
-Models Evaluated
+Dataset
+
+The project uses the UCI Appliances Energy Prediction dataset. The data was explored and prepared before training and evaluating the models.
+
+Methodology
+
+The workflow included data exploration, feature and target separation, a chronological train-test split, model training, prediction, evaluation, and visualization.
+
+The models evaluated were:
 
 1. Linear Regression
 2. Decision Tree Regression
 
 Evaluation Metrics
 
-The models were evaluated using:
-
-- Mean Absolute Error (MAE)
-- Root Mean Squared Error (RMSE)
-- Coefficient of Determination (R²)
+- Mean Absolute Error (MAE): Measures the average absolute difference between actual and predicted values.
+- Root Mean Squared Error (RMSE): Measures prediction error while penalizing larger errors more heavily.
+- R²: Measures model performance relative to a mean-based baseline.
 
 Results
 
-Linear Regression
+Metric| Linear Regression| Decision Tree
+MAE| 52.015| 155.845
+RMSE| 86.730| 211.575
+R²| 0.092| -4.401
 
-- MAE: 52.015 Wh per 10 minutes
-- RMSE: 86.730 Wh per 10 minutes
-- R²: 0.092
+The Linear Regression model performed better than the Decision Tree model on the test set. However, its low R² indicates limited predictive performance.
 
-Decision Tree Regression
-
-- MAE: 155.845 Wh per 10 minutes
-- RMSE: 211.575 Wh per 10 minutes
-- R²: -4.401
-
-Linear Regression performed better than the Decision Tree model on the test set. However, the results indicate that predictive performance could be improved.
-
-Project Files
-
-- The Google Colab notebook containing the code and analysis.
-- "linear_regression_evaluation.csv"
-- "decision_tree_evaluation.csv"
-- "final_model_comparison.csv"
-
-Future Improvements
-
-Future work could investigate feature engineering, hyperparameter tuning, and additional regression algorithms to improve predictive accuracy.
-
-Conclusion
-
-This project demonstrates the application of machine learning to household energy-consumption prediction and provides a foundation for further research into data-driven energy management.
 Project Limitations
 
-1. Limited predictive performance: The Linear Regression model achieved an R² of 0.092, indicating that it explains only a small proportion of the variation in the target values on the test set.
-2. Poor Decision Tree performance: The Decision Tree model achieved a negative R² of -4.401, meaning it performed worse than a baseline that predicts the mean of the test targets.
-3. Limited model selection: Only two regression algorithms were evaluated.
-4. Potential for improvement: Feature engineering, hyperparameter tuning, and testing other regression models may improve predictive accuracy.
-5. Generalization: The models should be tested further before being relied on for real-world energy-management decisions.
+The Linear Regression model explains only a small proportion of the variation in the test targets. The Decision Tree model performed worse than a baseline that predicts the mean of the test targets. Only two regression algorithms were evaluated.
 
 Recommendations for Future Research
 
-1. Evaluate additional algorithms: Test Random Forest Regression, Gradient Boosting, and other suitable regression models.
-2. Improve feature selection: Investigate which input variables contribute most to energy-consumption predictions.
-3. Tune model parameters: Use appropriate hyperparameter optimization methods to improve model performance.
-4. Use robust validation: Apply time-aware validation methods where appropriate to assess performance on future observations.
-5. Improve predictive accuracy: Investigate why the current models have low or negative R² scores and compare improvements using MAE, RMSE, and R².
-6. Explore practical applications: Once validated, investigate how accurate predictions could support household energy monitoring and energy-management decisions.
+- Evaluate additional algorithms, such as Random Forest and Gradient Boosting.
+- Investigate feature selection and feature engineering.
+- Tune model hyperparameters.
+- Use appropriate time-aware validation methods.
+- Investigate ways to improve predictive accuracy before real-world deployment.
 
+Project Files
+
+- "EMSSE_AOS_Energy_Consumption_ML.ipynb" — project notebook.
+- "linear_regression_evaluation.csv" — Linear Regression metrics.
+- "decision_tree_evaluation.csv" — Decision Tree metrics.
+- "final_model_comparison.csv" — model comparison results.
+
+Conclusion
+
+This project demonstrates the application of machine learning to household energy-consumption prediction. Linear Regression performed better than Decision Tree Regression in this experiment, but further work is needed to improve predictive accuracy.
